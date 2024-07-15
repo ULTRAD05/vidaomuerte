@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Universidad Tecnológica De Panamá</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000; /* Fondo negro */
+            color: #ffffff; /* Texto blanco */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Evita scroll horizontal */
+        }
+        .container {
+            position: relative; /* Asegura que el contenido sea relativo */
+            z-index: 1; /* Aparece encima del canvas de partículas */
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            color: #000000; /* Texto dentro del contenedor en negro */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            height: 100px;
+            display: block; /* Asegura que las imágenes se muestren correctamente */
+            margin: 0 auto; /* Centra las imágenes horizontalmente */
+        }
+        .title {
+            font-size: 28px; /* Aumentar tamaño de fuente */
+            font-weight: bold;
+            color: #ffd700; /* Color dorado */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Sombra dorada sutil */
+        }
+        .names {
+            margin-top: 20px;
+        }
+        .names ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .names li {
+            font-size: 20px; /* Aumentar tamaño de fuente */
+            margin: 10px 0;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000000; /* Fondo negro para el canvas de partículas */
+            top: 0;
+            left: 0;
+            z-index: 0; /* Coloca el canvas de partículas detrás del contenido */
+        }
+    </style>
+</head>
+<body>
+    <!-- Canvas para Particles.js -->
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <div class="header">
+            <img src="ruta/a/tu/logo_utp.png" alt="Logo UTP">
+            <img src="ruta/a/tu/logo_fisc.png" alt="Logo FISC">
+        </div>
+        <div class="title">
+            Universidad Tecnológica De Panamá<br>
+            Facultad de Ingeniería de Sistemas Computacionales<br>
+            Proyecto Semestral
+        </div>
+        <div class="names">
+            <ul>
+                <li>Daniel Nieto</li>
+                <li>Liam Rojano</li>
+                <li>Yuleis Villarreal</li>
+                <li>Edwin González </li>
+                <li>Efraín Muñoz</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Incluir Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Configuración de Particles.js -->
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
